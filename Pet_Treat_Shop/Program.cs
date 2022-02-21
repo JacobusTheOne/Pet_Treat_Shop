@@ -6,9 +6,9 @@ class Program
     public static void Main()
     {
         Treats treatShop = new Treats();
-        bool quit = false;
-        do
-        {
+        //bool quit = false;
+        //do
+        //{
             WriteLine("Enter the number of biscuits: ");
             treatShop.amountOfBiscuits = int.Parse(ReadLine());
             WriteLine("Enter the number of chewies: ");
@@ -20,12 +20,12 @@ class Program
             WriteLine("Is it the weekend? [Y = yes / N = no]: ");
             treatShop.SetWeekend(ReadLine().ToUpper());
             WriteLine(treatShop.CalculateAmount());
-            WriteLine("If want to quit press 1 or enter: ");
-            if (ReadLine() == "1")
-            {
-                quit = true;
-            }
-        } while (quit == false);
+        //    WriteLine("If want to quit press 1 or enter: ");
+        //    if (readline() == "1")
+        //    {
+        //        quit = true;
+        //    }
+        //} while (quit == false);
     }
 }
 
