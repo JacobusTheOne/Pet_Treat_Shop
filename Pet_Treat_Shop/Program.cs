@@ -8,7 +8,9 @@ class Program
         Treats treatShop = new Treats();
         //bool quit = false;
         //do
-        //{
+        //
+        try
+        {
             WriteLine("Enter the number of biscuits: ");
             treatShop.amountOfBiscuits = int.Parse(ReadLine());
             WriteLine("Enter the number of chewies: ");
@@ -19,7 +21,11 @@ class Program
             treatShop.SetBucketSize(ReadLine().ToUpper());
             WriteLine("Is it the weekend? [Y = yes / N = no]: ");
             treatShop.SetWeekend(ReadLine().ToUpper());
-            WriteLine(treatShop.CalculateAmount());
+            WriteLine($"Amount: {treatShop.CalculateAmount()}");
+        } catch (Exception ex)
+        {
+            WriteLine(ex.Message);
+        }
         //    WriteLine("If want to quit press 1 or enter: ");
         //    if (readline() == "1")
         //    {
